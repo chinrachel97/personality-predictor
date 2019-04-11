@@ -9,46 +9,9 @@ import pandas as pandas
 import tweepy
 from tqdm import tqdm
 import sys
+import api_keys
 
-
-twitter_api_tokens = [
-    ('hash-tag-searcher', {
-        'consumer-key': "Nd7J1InJaXN3QRIZLo9Hi3Vcg",
-        'consumer-secret': "p5AtH77gdWDRQyfUYUNqhFNPcxaADlzyUjq9b1s0CPooOFT2by",
-        'access-token': "1559190498-lfTKYXPu6g83X7aeWp2XkEU0dni3ARuHqZ59ayF",
-        'access-token-secret': "3uwnzRv5eHAAhEtDnmvydT13y4BV2gojFnShBJBeGvzj8"
-    }),
-    ('wordy.news', {
-        'consumer-key': "xc5fa8CWl2v9hkYuHOnZNXSxK",
-        'consumer-secret': "YqSw2uXCgsOWUoLY8NNPuTeWZ5FVfuenNGBsHEmxX9hMW2Z2gq",
-        'access-token': "1559190498-F0hhKbSoia1VJd5QIKq9xoaNor7LpyKe9sBtabW",
-        'access-token-secret': "omBBmvulv1YKyMcntgyWP1bsw5FLLi0oqEnqebA42HXjO"
-    }),
-    ('user-non-bullshit-collector', {
-        'consumer-key': "R0VO03XfN2DVr2H7YPCrZsZ4W",
-        'consumer-secret': "AEwxPDTtt98mVeSBpNO54EEQtISuoGdb0PwlTeIxwJt2R20upw",
-        'access-token': "1559190498-0DdWcfDv13RJ9RhJd8bmNsmBl2xMAuX9SqL4lGb",
-        'access-token-secret': "A2BmJNsQl6MSyoQAsH1dPGXXQxx9KIA5SmfEfLoS8Nglt"
-    }),
-    ('non-bs detector 2', {
-        'consumer-key': "NqBkDNnFE843DaKtsFsPJCs2U",
-        'consumer-secret': "UbyFnnsJfc3rLkgf7qcoel9QZ8yJtv8FCs1JLySjC9eUIcgMdi",
-        'access-token': "1559190498-aSi2gUaawU9KioPU02vyg3ZCBRftxE6oqepyxu7",
-        'access-token-secret': "ZDfrZOJ4Sq4ZWqcE3gftpgXqAfh2PWyhLw3rRFUf6nEoH"
-    }),
-    ('non-bs detector 3', {
-        'consumer-key': "3SYAWiIPxfUIi7MBE1jX395J3",
-        'consumer-secret': "hfHnHlPT6vky7kTQUuIicFjUjW6jbs4IHRUdrUmtPpJ4xDsYj8",
-        'access-token': "1559190498-uaNNsEbTqlXJTEhVLYXYCiNRTo6D2uAmSBtzpSs",
-        'access-token-secret': "BZ1Zi2T1HNBwR3Qr8zrQCbvKMaA7TFZW1y5c5cmAdhHyr"
-    }),
-    ('non-bs detector 4', {
-        'consumer-key': "ONFfClIqGKwQATJaX7FzLXQcN",
-        'consumer-secret': "5YSrkSsroY8aUucczZbfKbMGlw7KAlQSHvIbqZ6eD4PQlHy369",
-        'access-token': "1559190498-sc3IdHJt6adL1HNKhNlAkFG35aYROM7WyCWkpys",
-        'access-token-secret': "C9scTPnBgKO2hN5bXoTaLHsZV12XOU00AgJxarrSqs9eg"
-    })
-]
+twitter_api_tokens = api_keys.twitter_api_tokens
 
 PATH = "../"
 DEFAULT_SINCE_ID = 849298404987600896
